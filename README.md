@@ -255,6 +255,63 @@
 9. Fix any errors in linting:  
    `npm run lint:fix`
 
+### Add Tools to help development
+
+1. Add [NodeMon](https://nodemon.io/) to the project.  
+   `npm install --save-dev nodemon`
+2. Configure NodeMon  
+   `touch nodemon.json`  
+   Add the following content to that file :
+   ```json
+   {
+     "watch": ["src"],
+     "ext": "js,ts,json",
+     "ignore": ["src/**/*.test.ts"],
+     "exec": "ts-node ./src/index.ts"
+   }
+   ```
+3. Add [dotenv-cli](https://dotenv-cli.readthedocs.io/en/latest/) the the project.  
+   `npm install --save-dev dotenv-cli`
+4. Configure the environment variables
+   - Create a new `.env` file with the following content:
+     ```
+     APP_DEBUG=true
+     ```
+   - Create a new `.env.sample` file that shows users what variables are available, again add the same as .env file as this is not sensitive :
+
+- ```
+  APP_DEBUG=true
+  ```
+
+5. Add a new file `src/index.ts` with the following content (this is being executed by ModeMon):
+
+   ```ts
+   import { add } from "./utils";
+
+   console.log("sum", add(1, 3));
+
+   console.log("debug", process.env.APP_DEBUG);
+   ```
+
+6. Add additional script commands to the `package.json` file
+
+   ```json
+   {
+    ...
+
+    "scripts": {
+        "build": "tsc",
+        "dev": "dotenv -- nodemon",
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "lint": "eslint",
+        "lint:fix": "eslint --fix"
+      },
+
+     ...
+   }
+   ```
+
 ## VS Code Extensions
 
 Recommended extensions are listed in the `/.vscode/extensions.json` file as well as recommended settings in the `/.vscode/settings.json` file.
