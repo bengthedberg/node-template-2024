@@ -1,4 +1,4 @@
-# Setup a production node.js project
+# Setup a production node.js project template
 
 ### Create a new Node.js project with TypeScript and Jest
 
@@ -252,7 +252,7 @@
    ```
 8. Lint our code
    `npm run lint`
-9. ix any errors in linting:
+9. Fix any errors in linting:
    `npm run lint:fix`
 
 ## VS Code Extensions
