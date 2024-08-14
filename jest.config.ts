@@ -1,4 +1,4 @@
-import type {Config} from 'jest';
+import type { Config } from "jest";
 
 const config: Config = {
   // Use ts-jest preset for testing TypeScript files with Jest
