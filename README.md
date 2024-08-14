@@ -256,3 +256,5 @@
    `npm run lint:fix`
 
 ## VS Code Extensions
+
+Recommended extensions are listed in the `/.vscode/extensions.json` file as well as recommended settings in the `/.vscode/settings.json` file.
