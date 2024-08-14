@@ -1,0 +1,15 @@
+{
+  "extends": "@tsconfig/node20/tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "./",                                     /* Specify the root folder within your source files. */                          
+    "outDir": "./dist",                                  /* Specify an output folder for all emitted files. */
+    "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
