@@ -33,11 +33,11 @@
 
    The tsconfig configuration for node20 is defined [here](https://github.com/tsconfig/bases/blob/main/bases/node20.json).
 
-4. Add [Jest](https://jestjs.io/)
+4. Add [Jest](https://jestjs.io/)  
    `npm install jest ts-jest @types/jest --save-dev`
 
-5. Configure Jest
-   `touch jest.config.ts`
+5. Configure Jest  
+   `touch jest.config.ts`  
    Then add the following to that file:
 
    ```ts
@@ -104,7 +104,7 @@
      "extends": "@tsconfig/node20/tsconfig.json"
    }
    ```
-9. Run tests
+9. Run tests  
    `npm run test`
 
    ```
@@ -121,9 +121,9 @@
    Ran all test suites.`
    ```
 
-10. Add .gitignore for node
+10. Add .gitignore for node  
     `wget -O .gitignore  https://raw.githubusercontent.com/github/gitignore/main/Node.gitignore`
-11. Initialise git
+11. Initialise git  
     `git init --initial-branch=main`
 12. Commit all changes
     ```
@@ -133,8 +133,8 @@
 
 ### Setup ESLint and Prettier
 
-1. Install the [ESLint](https://eslint.org/)
-   `npm init @eslint/config@latest`
+1. Install the [ESLint](https://eslint.org/)  
+   `npm init @eslint/config@latest`  
    Then select the following options :
 
    ```
@@ -152,7 +152,7 @@
 
    The ESLint has created a new configuration file called `eslint.config.mjs`. You can read about the different ESLint options [here](https://eslint.org/docs/latest/use/configure/)
 
-2. Configure ESLint
+2. Configure ESLint  
    Update the `eslint.config.mjs` with the following configuration :
 
    ```js
@@ -182,9 +182,9 @@
    ];
    ```
 
-3. Install ESLint for Jest
+3. Install ESLint for Jest  
    `npm install eslint-plugin-jest --save-dev`
-4. Configure ESLint for Jest
+4. Configure ESLint for Jest  
    Add the following configuration to your `eslint.config.mjs` file :
 
    ```js
@@ -206,11 +206,11 @@
     ];
    ```
 
-5. Install Prettier
-   `npm install --save-dev eslint-plugin-prettier eslint-config-prettier`
+5. Install Prettier  
+   `npm install --save-dev eslint-plugin-prettier eslint-config-prettier`  
    `npm install --save-dev --save-exact prettier`
 
-6. Configure ESLint for Prettier
+6. Configure ESLint for Prettier  
    Add the following configuration to your `eslint.config.mjs` file :
 
    ```js
@@ -250,9 +250,9 @@
     ...
    }
    ```
-8. Lint our code
+8. Lint our code  
    `npm run lint`
-9. Fix any errors in linting:
+9. Fix any errors in linting:  
    `npm run lint:fix`
 
 ## VS Code Extensions
